@@ -1,4 +1,4 @@
-Test_udo- wdio,cucumberjs,chaijs,saucelabs
+Test_udo- wdio, cucumberjs, chaijs, saucelabs
 ====================
 ## Requirements
 
