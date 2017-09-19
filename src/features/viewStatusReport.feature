@@ -3,7 +3,7 @@ Feature: Test the New Leave Application
     I want to be able to test the attributes of a given element
 
     Background:
-        Given I open the site "/"
+        Given I open the site "/" 
 
     Scenario: Set the content of a input field
         Given I open the url "http://opensource.demo.orangehrmlive.com/"
