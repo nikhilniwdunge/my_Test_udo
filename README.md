@@ -1,12 +1,5 @@
-Cucumber Boilerplate
+Test_udo- wdio,cucumberjs,chaijs,saucelabs
 ====================
-
-[![Build Status](https://travis-ci.org/webdriverio/cucumber-boilerplate.svg?branch=master)](https://travis-ci.org/webdriverio/cucumber-boilerplate) [![Dependency Status](https://www.versioneye.com/user/projects/58932d83b166b5004053c63c/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58932d83b166b5004053c63c) [![Code Climate](https://codeclimate.com/github/webdriverio/cucumber-boilerplate/badges/gpa.svg)](https://codeclimate.com/github/webdriverio/cucumber-boilerplate) [![Test Coverage](https://codeclimate.com/github/webdriverio/cucumber-boilerplate/badges/coverage.svg)](https://codeclimate.com/github/webdriverio/cucumber-boilerplate/coverage)
-
-***
-
-Boilerplate project to run WebdriverIO tests with [Cucumber](https://cucumber.io/) and brings **true** [BDD](http://en.wikipedia.org/wiki/Behavior-driven_development) to JavaScript. Instead of writing complicated test code that only developers can understand, Cucumber maps an ordinary language to code and allows to start with the test process in the early stages of your product development.
-
 ## Requirements
 
 - Node version 6 or higher
@@ -17,7 +10,7 @@ Although this project works fine with NPM we recommend to use Yarn (>= 0.20.0) i
 
 Choose one of the following options:
 
-1. Download the latest stable release [here](https://github.com/webdriverio/cucumber-boilerplate/archive/master.zip) or clone the git repo — `git clone https://github.com/webdriverio/cucumber-boilerplate.git`
+1. Download the latest stable release or clone the git repo
 
 2. Then:
 - Copy the files to your project into a directory like `/integrationtests` (note the hidden files!)
@@ -52,26 +45,20 @@ that means that you write down what's supposed to happen in a real language. All
 directory. They should demonstrate, how tests could look like. Just create a new file and write your first
 test.
 
-__myFirstTest.feature__
+__eagLogin.feature__
 ```gherkin
-Feature:
-    In order to keep my product stable
-    As a developer or product manager
-    I want to make sure that everything works as expected
-
-Scenario: Check title of website after search
-    Given I open the url "http://google.com"
-    When I set "WebdriverIO" to the inputfield "#gbqfq"
-    And I press "Enter"
-    Then I expect that the title is "WebdriverIO - Google Search"
-
-Scenario: Another test
-    Given ...
+Feature:Check title of Eag Portal
+    
+Scenario: Check title of Eag Portal after login
+    Given I open the url "https://eag.synechron.com/"
+    When I set "username" to the inputfield "nikhil.niwdunge"
+    And I set "password" to the inputfield "Test@1234"
+    And I click on the element "#btnLogin"  
+    Then I expect that the title is "Welcome to Enterprise Application Portal"
 
 ```
 
-This test opens the browser and navigates them to google.com to check if the title contains the search
-query after doing a search. As you can see, it is pretty simple and understandable for everyone.
+This test opens the browser and navigates them to "https://eag.synechron.com/" to check if the title "Welcome to Enterprise Application Portal". As you can see, it is pretty simple and understandable for everyone.
 
 # How to run the test
 
@@ -91,7 +78,7 @@ _please note_ The WDIO runner uses the configuration file `wdio.conf.js` by defa
 
 # Configurations
 
-To configure your tests, checkout the [`wdio.conf.js`](https://github.com/webdriverio/cucumber-boilerplate/blob/master/wdio.conf.js) file in your test directory. It comes with a bunch of documented options you can choose from.
+To configure your tests, checkout the [`wdio.conf.js`] file in your test directory. It comes with a bunch of documented options you can choose from.
 
 ## Environment-specific configurations
 
@@ -110,7 +97,7 @@ __wdio.STAGING.conf.js__
 ```js
 var config = require('./wdio.conf.js').config;
 
-config.baseUrl = 'http://staging.example.com'
+config.baseUrl = "https://eag.synechron.com/"
 
 exports.config = config;
 ```
@@ -119,14 +106,14 @@ Your environment-specific config file will get merged into the default config fi
 To run a test in a specific environment just add the desired configuration file as the first parameter:
 
 ```sh
-$ yarn run wdio wdio.STAGING.conf.js
+$ yarn run wdio wdio.conf.js
 ```
 
 # Running single feature
 Sometimes its useful to only execute a single feature file, to do so use the following command:
 
 ```sh
-$ yarn run wdio -- --spec ./test/features/select.feature
+$ yarn run wdio -- --spec ./src/features/eagLogin.feature
 ```
 
 
@@ -161,18 +148,7 @@ Feature: ...
 Scenario: ...
 ```
 
-# Adding new steps and snippets
-
-The predefined snippets allow you to do a lot of common things but you might need extra snippets which
-are better aligned with your aims. To do so you will find all step definitions in `./src/steps`. They
-are separated in `given`, `when` and `then`.
-
-You define your snippet using regular expressions. This is pretty powerful as it allows you to create complex
-sentences with multiple options. Everything that's within `"([^"]*)?"` gets captured and appended to the
-callback. The last argument is always a callback function that you need to call when your step is done.
-You can access the browser and your WebdriverIO instance with `browser`.
-
-To assert values this boilerplate project comes with a [Chai](http://chaijs.com/) integration.
+To assert values this project comes with a [Chai](http://chaijs.com/) integration.
 
 # Comments
 
@@ -183,19 +159,19 @@ You can add additional descriptive comments in your feature files.
   This is a
   block comment
 ###
-Feature: As a bystander
-    I can watch bottles falling from a wall
-    So that I can be mildly amused
-
-# This is a single line comment
-Scenario: check if username is present
-    Given I login as "roboter" with password "test123"
-    Then the username "roboter" should be present in the header
+Feature:Check title of Eag Portal
+    
+Scenario: Check title of Eag Portal after login
+    Given I open the url "https://eag.synechron.com/"
+    When I set "username" to the inputfield "nikhil.niwdunge"
+    And I set "password" to the inputfield "Test@1234"
+    And I click on the element "#btnLogin"  
+    Then I expect that the title is "Welcome to Enterprise Application Portal"
 ```
 
 # List of predefined steps
 
-Check out all predefined snippets. You can see how they get used in [`sampleSnippets.feature`](https://github.com/webdriverio/cucumber-boilerplate/blob/master/src/features/sampleSnippets.feature).
+Check out all predefined snippets.
 
 ## Given steps
 
