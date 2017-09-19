@@ -13,6 +13,7 @@ Feature: Test the New Leave Application
         And   I expect that element "#welcome" is visible		
 		And   I click on the element "#menu_time_viewTimeModule>b"
 		And   I move to element "#menu_time_Timesheets"
+		And   I move to element "#menu_time_viewEmployeeTimesheet"
 		And   I click on the element "#menu_time_viewEmployeeTimesheet"
 	    And   I set "John Smith" to the inputfield "#employee"
 		And   I click on the element "#btnView"
