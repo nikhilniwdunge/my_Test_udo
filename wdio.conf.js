@@ -283,14 +283,14 @@ exports.config = {
     // global variables from the test.
    after: function after(result, capabilities, specs) {
 	   
-	   execCommand('allure generate allure-results --clean', function (err, stdout, stderr) {
+	   /*execCommand('allure generate allure-results --clean', function (err, stdout, stderr) {
 			if( err ){
 				console.log(' err allure generate ', err );
 			} else {
 				console.log(' allure generated successfully ');
 
 			}
-		})
+		})*/
     },
     //
     // Gets executed after all workers got shut down and the process is about to
