@@ -67,7 +67,7 @@ exports.config = {
     coloredLogs: true,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath: 'C:/my_Test_udo/cucumberjs_wdio_orangeHRM/errorScreenShots/',
+    screenshotPath: 'errorScreenShots',
     //
     // Set a base URL in order to shorten url command calls. If your url
     // parameter starts with "/", then the base url gets prepended.
@@ -227,8 +227,8 @@ exports.config = {
 				}
 
 			};
-			deleteFolderRecursive('C:\\my_Test_udo\\cucumberjs_wdio_orangeHRM\\allure-results\\');
-						deleteFolderRecursive('C:\\my_Test_udo\\cucumberjs_wdio_orangeHRM\\allure-report\\');
+			deleteFolderRecursive('allure-results');
+			deleteFolderRecursive('allure-report');
 
 		 }catch(e){
 			 console.log('  err ', e.message);
