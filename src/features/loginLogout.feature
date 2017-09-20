@@ -22,6 +22,6 @@ Feature: Login LogOut Feature
         And   I click on the element "#btnLogin"
 		And   I expect that element "#welcome" is visible  
 		And   I click on the element "#welcome"
-		And   I click on the element ".//*[@id='welcome-menu']/ul/li[2]/a"
+		And   I click on the element ".//*[@id='welcome-menu']/ul/li[1]/a"
 		Then  I expect that the title is "OrangeHRM"
         
