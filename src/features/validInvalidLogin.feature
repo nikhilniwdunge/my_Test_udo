@@ -10,24 +10,16 @@ Feature: login with Valid and Inavlid credentials
 
     Scenario Outline : login with invalid credentials
         Given I open the url "http://opensource.demo.orangehrmlive.com/"
-        When  I set "<username>" to the inputfield "#txtUsername"
-        And   I set "<password>" to the inputfield "#txtPassword"
+        When  I set "Admin" to the inputfield "#txtUsername"
+        And   I set "admin" to the inputfield "#txtPassword"
         And   I click on the element "#btnLogin"
 		Then  I expect that element "#spanMessage" is visible
 	
-	 Examples:
-	| username   |password  |
-	| Admin	     | admin	|
-	| Admin	     | admin	|
 	
 	Scenario Outline : login with valid credentials
         Given I open the url "http://opensource.demo.orangehrmlive.com/"
-        When  I set "<username>" to the inputfield "#txtUsername"
-        And   I set "<password>" to the inputfield "#txtPassword"
+        When  I set "Admin" to the inputfield "#txtUsername"
+        And   I set "admin" to the inputfield "#txtPassword"
         And   I click on the element "#btnLogin"
 		Then  I expect that element "#welcome" is visible  
     
-	 Examples:
-	| username   |password  |
-	| Admin	     | admin	|
-	| Admin	     | admin	|
