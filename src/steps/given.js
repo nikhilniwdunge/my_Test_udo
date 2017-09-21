@@ -3,6 +3,7 @@ import { defineSupportCode } from 'cucumber';
 import checkContainsAnyText from '../support/check/checkContainsAnyText';
 import checkIsEmpty from '../support/check/checkIsEmpty';
 import checkContainsText from '../support/check/checkContainsText';
+import storeOutputText from '../support/check/storeOutputText';
 import checkCookieContent from '../support/check/checkCookieContent';
 import checkCookieExists from '../support/check/checkCookieExists';
 import checkDimension from '../support/check/checkDimension';
