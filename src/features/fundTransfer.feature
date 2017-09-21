@@ -30,16 +30,6 @@ Feature: Balance Enquiry after fundTransfer from two accounts
         And   I set "Atul-Ritesh" to the inputfield "input[name='desc']"
         And   I click on the element "input[name='AccSubmit']" 
 
-        And   I click on the element "a[href='BalEnqInput.php']"
-        And   I set "33155" to the inputfield "input[name='accountno']"
-        And   I click on the element "input[name='AccSubmit']"
-        And   I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text "7000"
-
-        And   I click on the element "a[href='BalEnqInput.php']"
-        And   I set "33157" to the inputfield "input[name='accountno']"
-        And   I click on the element "input[name='AccSubmit']"
-        And   I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text "105000"
-        
         And   I click on the element "a[href='FundTransInput.php']"
         And   I set "33157" to the inputfield "input[name='payersaccount']"  
         And   I set "33155" to the inputfield "input[name='payeeaccount']"
