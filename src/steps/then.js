@@ -29,7 +29,7 @@ import isExisting from '../support/check/isExisting';
 import isVisible from '../support/check/isVisible';
 import waitFor from '../support/action/waitFor';
 import waitForVisible from '../support/action/waitForVisible';
-import getValue from '../steps/getValue';
+import getValue from '../support/action/getValue';
 
 
 defineSupportCode(({ Then }) => {
@@ -68,11 +68,15 @@ defineSupportCode(({ Then }) => {
         checkEqualsText
     );
 
-     Then(
-         /^I store that element "([^"]*)?"( not)* contains the text "([^"]*)?"$/,
+    Then(
+         /^I store text of element "([^"]*)?"( not)* contains the text into variable?"$/,
          storeOutputText
-     );
+    );
 
+    Then(
+         /^Print variable?"$/,
+         getValue
+    );
 
      Then(
          /^I expect that element "([^"]*)?"( not)* contains the text "([^"]*)?"$/,
