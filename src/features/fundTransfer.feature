@@ -48,6 +48,11 @@ Feature: Balance Enquiry after fundTransfer from two accounts
         And   I click on the element "input[name='AccSubmit']" 
 
         And   I click on the element "a[href='BalEnqInput.php']"
-        And   I set "33153" to the inputfield "input[name='accountno']"
+        And   I set "33155" to the inputfield "input[name='accountno']"
         And   I click on the element "input[name='AccSubmit']"
-        Then   I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text "10000"   
+        And   I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text "12000"
+
+        And   I click on the element "a[href='BalEnqInput.php']"
+        And   I set "33157" to the inputfield "input[name='accountno']"
+        And   I click on the element "input[name='AccSubmit']"
+        And   I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text "100000"
