@@ -1,3 +1,3 @@
-module.exports = function() {
-    console.log("Print Variable ", global.outputText);
+module.exports = function( name ) {
+    console.log("Print Variable ", global[name]);
 };
