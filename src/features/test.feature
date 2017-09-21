@@ -16,5 +16,6 @@ Feature: Balance Enquiry after Deposit and Withdrawal amount
         And   I click on the element "input[name='AccSubmit']"
         And   I store text of element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" into variable
         And   Print variable
-        Then  I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text <outputText>
+        And   I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text {outputText}
+        Then  I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text [outputText]
 
