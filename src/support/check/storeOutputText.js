@@ -33,8 +33,8 @@ module.exports = (element) => {
      * @type {String}
      */
     const text = browser[command](element);
-    global.outputText=text;
-    console.log(' global.outputText ', global.outputText);
+    this.outputText=text;
+    console.log(' global.outputText ', this.outputText);
 
     
 };
