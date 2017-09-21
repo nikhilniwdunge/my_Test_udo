@@ -66,10 +66,11 @@ defineSupportCode(({ Then }) => {
         checkEqualsText
     );
 
-     Then( /^I store that element "([^"]*)?"( not)* contains the text$/, function (text) {
-        console.log("Output text", text);
-        checkContainsText
-      });
+     Then(
+         /^I store that element "([^"]*)?"( not)* contains the text "([^"]*)?"$/,
+         storeOutputText
+     );
+
 
      Then(
          /^I expect that element "([^"]*)?"( not)* contains the text "([^"]*)?"$/,

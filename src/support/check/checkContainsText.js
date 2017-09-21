@@ -33,7 +33,8 @@ module.exports = (element, falseCase, expectedText) => {
      * @type {String}
      */
     const text = browser[command](element);
-
+  
+    
     if (typeof expectedText === 'undefined') {
         stringExpectedText = falseCase;
         boolFalseCase = false;

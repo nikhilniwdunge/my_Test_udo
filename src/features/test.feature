@@ -14,4 +14,5 @@ Feature: Balance Enquiry after Deposit and Withdrawal amount
         And   I click on the element "a[href='BalEnqInput.php']"
         And   I set "33153" to the inputfield "input[name='accountno']"
         And   I click on the element "input[name='AccSubmit']"
-        And   I store that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text
+        And   I store that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text "10000"
+       

@@ -33,6 +33,8 @@ module.exports = (element, falseCase, expectedText) => {
      * @type {String}
      */
     const text = browser[command](element);
+    global.outputText=text;
+    console.log(' global.outputText ', global.outputText);
 
-    const outputText= return text;
+    
 };
