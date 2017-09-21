@@ -11,8 +11,7 @@ import checkDimension from '../support/check/checkDimension';
 import checkEqualsText from '../support/check/checkEqualsText';
 import checkFocus from '../support/check/checkFocus';
 import checkInURLPath from '../support/check/checkInURLPath';
-import checkIsOpenedInNewWindow from
-    '../support/check/checkIsOpenedInNewWindow';
+import checkIsOpenedInNewWindow from '../support/check/checkIsOpenedInNewWindow';
 import checkModal from '../support/check/checkModal';
 import checkModalText from '../support/check/checkModalText';
 import checkNewWindow from '../support/check/checkNewWindow';
@@ -74,7 +73,7 @@ defineSupportCode(({ Then }) => {
     );
 
     Then(
-         /^Print variable?"$/,
+         /^Print variable$/,
          getValue
     );
 
