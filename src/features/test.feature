@@ -3,10 +3,10 @@ Feature: Balance Enquiry after Deposit and Withdrawal amount
     I want to be able to test the attributes of a given element
 
     Background:
-        Given I open the site "/" 
+        Given I open the site "/"         
 
     Scenario: login with valid credentials
-        Given I open the url "http://www.demo.guru99.com/v4/"
+        Given I open the url "http://wwww.demo.guru99.com/v4/"
         When  I set "mngr97977" to the inputfield "input[name='uid']"
         And   I set "mEgubYz" to the inputfield "input[name='password']"
         And   I click on the element "input[name='btnLogin']"
@@ -14,5 +14,5 @@ Feature: Balance Enquiry after Deposit and Withdrawal amount
         And   I click on the element "a[href='BalEnqInput.php']"
         And   I set "33153" to the inputfield "input[name='accountno']"
         And   I click on the element "input[name='AccSubmit']"
-        And   I store that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text "10000"
-       
+        And   I  that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text getValue
+

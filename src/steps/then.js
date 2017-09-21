@@ -29,6 +29,7 @@ import isExisting from '../support/check/isExisting';
 import isVisible from '../support/check/isVisible';
 import waitFor from '../support/action/waitFor';
 import waitForVisible from '../support/action/waitForVisible';
+import getValue from '../steps/getValue';
 
 
 defineSupportCode(({ Then }) => {
