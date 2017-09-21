@@ -5,7 +5,7 @@
  *                                  the given text or not
  * @param  {String}   expectedText  The text to check against
  */
-module.exports = (element, falseCase, expectedText) => {
+module.exports = (element) => {
     /**
      * The command to perform on the browser object
      * @type {String}
@@ -20,13 +20,13 @@ module.exports = (element, falseCase, expectedText) => {
      * False case
      * @type {Boolean}
      */
-    let boolFalseCase;
+    //let boolFalseCase;
 
     /**
      * The expected text
      * @type {String}
      */
-    let stringExpectedText = expectedText;
+    //let stringExpectedText = expectedText;
 
     /**
      * The text of the element
