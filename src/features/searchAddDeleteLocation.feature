@@ -1,57 +1,48 @@
-@AddSearchDeleteLocation
-Feature: Add, Search and Delete Location Feature
+@AddDeleteCustomer
+Feature: Balance Enquiry after fundTransfer from two accounts
     As a developer
-    I want to be able to test Add, Search and Delete Location Feature of application
+    I want to be able to test the attributes of a given element
 
     Background:
-        Given I open the site "/"
-		
-	Scenario: First Delete All Location from available Feature
-          Given I open the url "http://opensource.demo.orangehrmlive.com/"
-        When  I set "Admin" to the inputfield "#txtUsername"
-        And   I set "admin" to the inputfield "#txtPassword"
-        And   I click on the element "#btnLogin"
-		And   I expect that element "#welcome" is visible
-		And   I click on the element "#menu_admin_viewAdminModule>b"
-		And   I move to element "#menu_admin_Organization"
-		And   I click on the element "#menu_admin_viewLocations"
-		And   I expect that checkbox "#ohrmList_chkSelectAll" is not checked
-		And   I click on the element "#ohrmList_chkSelectAll"
-		And   I click on the element "#btnDelete"
-		Then  I click on the element "#dialogDeleteBtn"
-		
-	Scenario: Add Location Feature
-		Given   I expect that element "#welcome" is visible
-		And   I click on the element "#menu_admin_viewAdminModule>b"
-		And   I move to element "#menu_admin_Organization"
-		And   I click on the element "#menu_admin_viewLocations"
-		And   I click on the element "#btnAdd"
-		And   I clear the inputfield "#location_name"
-        And   I set "Ascendas" to the inputfield "#location_name"
-		And   I select the option with the text "India" for element "#location_country"
-		And   I clear the inputfield "#location_province"
-        And   I set "Maharashtra" to the inputfield "#location_province"
-		And   I clear the inputfield "#location_city"
-        And   I set "Pune" to the inputfield "#location_city"
-		And   I clear the inputfield "#location_address"
-        And   I set "CEDAR Building, Rajiv Gandhi Infotech Park, Hinjewadi Phase III" to the inputfield "#location_address"
-		And   I clear the inputfield "#location_zipCode"
-        And   I set "411057" to the inputfield "#location_zipCode"
-		And   I clear the inputfield "#location_phone"
-        And   I set "2020451234" to the inputfield "#location_phone"
-		Then  I click on the element "#btnSave"
-	 
+        Given I open the site "/" 
 
-    Scenario: Search and Delete Location Feature
-        Given I expect that element "#welcome" is visible
-		And   I click on the element "#menu_admin_viewAdminModule>b"
-		And   I move to element "#menu_admin_Organization"
-		And   I click on the element "#menu_admin_viewLocations"
-		And   I clear the inputfield "#searchLocation_name"
-        And   I set "Ascendas" to the inputfield "#searchLocation_name"
-		And   I click on the element "#btnSearch"
-		And   I expect that element "//tbody/tr/td[2]/a" is visible
-		And   I expect that checkbox "#ohrmList_chkSelectAll" is not checked
-		And   I click on the element "#ohrmList_chkSelectAll"
-		And   I click on the element "#btnDelete"
-		Then  I click on the element "#dialogDeleteBtn"
+    Scenario: First check balance, fundTransfer from account1 to account2,fundTransfer from account2 to account1, then finally check balance.
+
+        Given I open the url "http://www.demo.guru99.com/v4/"
+        When  I set "mngr97977" to the inputfield "input[name='uid']"
+        And   I set "mEgubYz" to the inputfield "input[name='password']"
+        And   I click on the element "input[name='btnLogin']"
+        
+        And   I click on the element "a[href='BalEnqInput.php']"
+        And   I set "33155" to the inputfield "input[name='accountno']"
+        And   I click on the element "input[name='AccSubmit']"
+        And   I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text "12000"
+
+        And   I click on the element "a[href='BalEnqInput.php']"
+        And   I set "33157" to the inputfield "input[name='accountno']"
+        And   I click on the element "input[name='AccSubmit']"
+        And   I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text "100000"
+        
+        And   I click on the element "a[href='FundTransInput.php']"
+        And   I set "33155" to the inputfield "input[name='payersaccount']"  
+        And   I set "33157" to the inputfield "input[name='payeeaccount']"
+        And   I set "5000" to the inputfield "input[name='ammount']" 
+        And   I set "Atul-Ritesh" to the inputfield "input[name='desc']"
+        And   I click on the element "input[name='AccSubmit']" 
+
+        And   I click on the element "a[href='FundTransInput.php']"
+        And   I set "33157" to the inputfield "input[name='payersaccount']"  
+        And   I set "33155" to the inputfield "input[name='payeeaccount']"
+        And   I set "5000" to the inputfield "input[name='ammount']" 
+        And   I set "Ritesh-Atul" to the inputfield "input[name='desc']"
+        And   I click on the element "input[name='AccSubmit']" 
+
+        And   I click on the element "a[href='BalEnqInput.php']"
+        And   I set "33155" to the inputfield "input[name='accountno']"
+        And   I click on the element "input[name='AccSubmit']"
+        And   I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text "12000"
+
+        And   I click on the element "a[href='BalEnqInput.php']"
+        And   I set "33157" to the inputfield "input[name='accountno']"
+        And   I click on the element "input[name='AccSubmit']"
+        And   I expect that element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" contains the text "100000"
