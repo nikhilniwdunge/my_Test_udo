@@ -9,7 +9,7 @@ module.exports = (name) => {
      * @type {String}
      */
    console.log("Print Variable ", name);
-      console.log("Print arguments ", arguments);
+   console.log("Print arguments ", arguments);
 
    console.log("Print Variable ", global[name]);
 
