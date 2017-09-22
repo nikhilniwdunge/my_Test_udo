@@ -155,7 +155,6 @@ exports.config = {
         profile: [],
         // <string[]> (file/dir) require files before executing features
         require: [
-            './src/support/objectRepository/loginPage.js',
             './src/steps/given.js',
             './src/steps/then.js',
             './src/steps/when.js'
@@ -197,6 +196,8 @@ exports.config = {
          */
 		 try{
 			 var fs = require('fs');
+             var    loginPage =  require('./src/support/objectRepository/loginPage.js');
+
 
 			var pathObj = require('path');
 			
