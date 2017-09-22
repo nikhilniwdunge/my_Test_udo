@@ -8,8 +8,6 @@ module.exports = (name) => {
      * The URL to navigate to
      * @type {String}
      */
-   console.log("Print Variable ", name);
-   console.log("Print arguments ", arguments);
 
    console.log("Print Variable ", global[name]);
 

@@ -196,7 +196,8 @@ exports.config = {
          */
 		 try{
 			 var fs = require('fs');
-             var loginPage =  require('./src/support/objectRepository/loginPage.js')();
+
+             var config =  require('./src/support/testDataConfig/config.js')();
 
              
 			 var pathObj = require('path');

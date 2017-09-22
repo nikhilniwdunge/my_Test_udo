@@ -5,7 +5,9 @@
  * @param  {String}   type    Type of the element (link or selector)
  * @param  {String}   element Element selector
  */
-module.exports = (action, type, element) => {
+module.exports = () => {
+
+   global.Bank_url="http://www.demo.guru99.com/v4/" 
    global.userNameTextbox = "input[name='uid']";
    global.passwordTextbox = "input[name='password']";
    global.loginButton = "input[name='btnLogin']";
@@ -13,7 +15,13 @@ module.exports = (action, type, element) => {
    global.AccountNumberTextBox = "input[name='accountno']";
    global.submitButton = "input[name='AccSubmit']";
    global.BalanceText = ".//*[@id='balenquiry']/tbody/tr[16]/td[2]";
+   global.ExpectedBalance = "10000";
 
+   global.amountTextbox = "input[name='ammount']";
+   global.descriptionTextbox = "input[name='desc']";
+
+   global.depositLink = "a[href='BalEnqInput.php']";
+   global.withdrawalLink = "a[href='BalEnqInput.php']";
 
 };
 

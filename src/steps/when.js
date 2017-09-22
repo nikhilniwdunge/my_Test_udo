@@ -40,17 +40,23 @@ defineSupportCode(({ When }) => {
 
     When(
         /^I clear the inputfield "([^"]*)?"$/,
-        clearInputField
+        function(element){
+        clearInputField(global[element]);
+       }     
     );
 
     When(
         /^I drag element "([^"]*)?" to element "([^"]*)?"$/,
-        dragElement
+        function(source,destination){
+            dragElement(global[source], global[destination]);
+        }
     );
 
     When(
         /^I submit the form "([^"]*)?"$/,
-        submitForm
+        function(form){
+        submitForm(global[form]);
+       }     
     );
 
     When(
@@ -60,56 +66,86 @@ defineSupportCode(({ When }) => {
 
     When(
         /^I set a cookie "([^"]*)?" with the content "([^"]*)?"$/,
-        setCookie
+        function(cookieName, cookieContent){
+            setCookie(global[cookieName], global[cookieContent]);
+        }   
     );
 
     When(
         /^I delete the cookie "([^"]*)?"$/,
-        deleteCookie
+        function(name){
+         deleteCookie(global[name]);
+       }     
     );
 
     When(
         /^I press "([^"]*)?"$/,
-        pressButton
+        function(key){
+         pressButton(global[key]);
+       }        
     );
 
     When(
         /^I (accept|dismiss) the (alertbox|confirmbox|prompt)$/,
-        handleModal
+        function(action, modalType){
+         handleModal(global[action], modalType);
+        } 
+      
     );
 
     When(
         /^I enter "([^"]*)?" into the prompt$/,
-        setPromptText
+        function(modalText){
+           setPromptText(global[modalText]);
+        } 
+      
     );
 
     When(
         /^I scroll to element "([^"]*)?"$/,
-        scroll
+        function(selector){
+            scroll(global[selector]);
+        } 
+      
     );
 
     When(
         /^I close the last opened (window|tab)$/,
-        closeLastOpenedWindow
+        function(obsolete){
+            closeLastOpenedWindow(obsolete);
+        } 
+       
     );
 
     When(
         /^I focus the last opened (window|tab)$/,
-        focusLastOpenedWindow
+        function(obsolete){
+             focusLastOpenedWindow(obsolete);
+        } 
+      
     );
 
     When(
         /^I select the (\d+)(st|nd|rd|th) option for element "([^"]*)?"$/,
-        selectOptionByIndex
+        function(index, obsolete, selectElem){
+            selectOptionByIndex(index, obsolete, global[selectElem]);
+        }
+        
     );
 
     When(
         /^I select the option with the (name|value|text) "([^"]*)?" for element "([^"]*)?"$/,
-        selectOption
+        function(selectionType, selectionValue, selectElem){
+            selectOption(selectionType, selectionValue, global[selectElem]);
+        }
+        
     );
 
     When(
         /^I move to element "([^"]*)?"(?: with an offset of (\d+),(\d+))*$/,
-        moveToElement
+        function(element, x, y){
+            moveToElement(global[element],x, y);
+        }
+        
     );
 });

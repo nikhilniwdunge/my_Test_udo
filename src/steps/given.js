@@ -26,67 +26,99 @@ import resizeScreenSize from '../support/action/resizeScreenSize';
 defineSupportCode(({ Given }) => {
     Given(
         /^I open the (url|site) "([^"]*)?"$/,
-        openWebsite
+        function(type, page){
+            openWebsite(type,global[page]);
+        }
+        
     );
 
     Given(
         /^the element "([^"]*)?" is( not)* visible$/,
-        isVisible
+        function(element,falseCase){
+            isVisible(global[element],falseCase);
+        }
     );
 
     Given(
         /^the element "([^"]*)?" is( not)* enabled$/,
-        isEnabled
+        function(element,falseCase){
+            isEnabled(global[element],falseCase);
+        }
+        
     );
 
     Given(
         /^the element "([^"]*)?" is( not)* selected$/,
-        checkSelected
+        function(element,falseCase){
+            checkSelected(global[element],falseCase);
+        }
+        
     );
 
     Given(
         /^the checkbox "([^"]*)?" is( not)* checked$/,
-        checkSelected
+        function(element,falseCase){
+            checkSelected(global[element],falseCase);
+        }
+     
     );
 
     Given(
         /^there is (an|no) element "([^"]*)?" on the page$/,
-        checkElementExists
+        function(falseCase,element){
+            checkElementExists(falseCase,global[element]);
+        }
+        
     );
 
     Given(
         /^the title is( not)* "([^"]*)?"$/,
-        checkTitle
+        function(falseCase, expectedTitle){
+            checkTitle(falseCase,global[expectedTitle]);
+        }
+
     );
 
     Given(
         /^the element "([^"]*)?" contains( not)* the same text as element "([^"]*)?"$/,
-        compareText
+        function(element1,falseCase,element2){
+            compareText(global[element1],falseCase,global[element2]);
+        }
     );
 
     Given(
         /^the element "([^"]*)?"( not)* matches the text "([^"]*)?"$/,
-        checkEqualsText
+        function(element,falseCase,expectedText){
+            checkEqualsText(global[element],falseCase,global[expectedText]);
+        }
     );
 
     Given(
         /^the element "([^"]*)?"( not)* contains the text "([^"]*)?"$/,
-        checkContainsText
+        function(element,falseCase,expectedText){
+            checkContainsText(global[element],falseCase,global[expectedText]);
+        }
     );
 
     Given(
         /^the element "([^"]*)?"( not)* contains any text$/,
-        checkContainsAnyText
+      function(element,falseCase){
+            checkContainsAnyText(global[element],falseCase);
+        }
     );
 
     Given(
         /^the element "([^"]*)?" is( not)* empty$/,
-        checkIsEmpty
+        function(element,falseCase){
+            checkIsEmpty(global[element],falseCase);
+        }
     );
 
     Given(
         /^the page url is( not)* "([^"]*)?"$/,
-        checkUrl
+        function(falseCase,expectedURl){
+            checkURL(falseCase,global[expectedURl]);
+        }
     );
 
     Given(

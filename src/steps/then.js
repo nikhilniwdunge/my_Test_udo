@@ -34,37 +34,57 @@ import getValue from '../support/action/getValue';
 defineSupportCode(({ Then }) => {
     Then(
         /^I expect that the title is( not)* "([^"]*)?"$/,
-        checkTitle
+        function(falseCase, expectedTitle){
+            checkTitle(falseCase,global[expectedTitle]);
+        }
+        
     );
 
     Then(
         /^I expect that element "([^"]*)?" is( not)* visible$/,
-        isVisible
+        function(element,falseCase){
+            isVisible(global[element],falseCase);
+        }
+        
     );
 
     Then(
         /^I expect that element "([^"]*)?" becomes( not)* visible$/,
-        waitForVisible
+        function(element,falseCase){
+            waitForVisible(global[element],falseCase);
+        }
+        
     );
 
     Then(
         /^I expect that element "([^"]*)?" is( not)* within the viewport$/,
-        checkWithinViewport
+        function(element,falseCase){
+            checkWithinViewport(global[element],falseCase);
+        }
+        
     );
 
     Then(
         /^I expect that element "([^"]*)?" does( not)* exist$/,
-        isExisting
+        function(element,falseCase){
+            isExisting(global[element],falseCase);
+        }     
     );
 
     Then(
         /^I expect that element "([^"]*)?"( not)* contains the same text as element "([^"]*)?"$/,
-        compareText
+        function(element1,falseCase,element2){
+            compareText(global[element1],falseCase,global[element2]);
+        }
+        
     );
 
     Then(
         /^I expect that element "([^"]*)?"( not)* matches the text "([^"]*)?"$/,
-        checkEqualsText
+        function(element,falseCase,expectedText){
+            checkEqualsText(global[element],falseCase,global[expectedText]);
+        }
+        
     );
 
     Then(
@@ -76,38 +96,59 @@ defineSupportCode(({ Then }) => {
 
     Then(
         /^Print variable "([^"]*)?"$/,
-         getValue
+         function(variableName){
+            getValue(variableName);
+        }
+         
     );
 
      Then(
          /^I expect that element "([^"]*)?"( not)* contains the text "([^"]*)?"$/,
-         checkContainsText
+         function(element,falseCase,expectedText){
+            checkContainsText(global[element],falseCase,global[expectedText]);
+        }
+         
      );
 
 
     Then(
         /^I expect that element "([^"]*)?"( not)* contains any text$/,
-        checkContainsAnyText
+        function(element,falseCase){
+            checkContainsAnyText(global[element],falseCase);
+        }
+        
     );
 
     Then(
         /^I expect that element "([^"]*)?" is( not)* empty$/,
-        checkIsEmpty
+        function(element,falseCase){
+            checkIsEmpty(global[element],falseCase);
+        }
+        
     );
 
     Then(
         /^I expect that the url is( not)* "([^"]*)?"$/,
-        checkURL
+         function(falseCase,expectedURl){
+            checkURL(falseCase,global[expectedURl]);
+        }
+        
     );
 
     Then(
         /^I expect that the path is( not)* "([^"]*)?"$/,
-        checkURLPath
+         function(falseCase,expectedURlPath){
+            checkURLPath(falseCase,global[expectedURlPath]);
+        }
+        
     );
 
     Then(
         /^I expect the url to( not)* contain "([^"]*)?"$/,
-        checkInURLPath
+         function(falseCase,expectedURlContent){
+            checkInURLPath(falseCase,global[expectedURlContent]);
+        }
+        
     );
 
     Then(
