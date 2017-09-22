@@ -5,7 +5,7 @@
  *                                  the given text or not
  * @param  {String}   expectedText  The text to check against
  */
-module.exports = (element) => {
+module.exports = (element, variableName) => {
     /**
      * The command to perform on the browser object
      * @type {String}
@@ -33,8 +33,7 @@ module.exports = (element) => {
      * @type {String}
      */
     const text = browser[command](element);
-    global.outputText=text;
-    console.log(' global.outputText ', global.outputText);
+    global[variableName] = text;
 
     
 };

@@ -13,6 +13,6 @@ Feature: Balance Enquiry after Deposit and Withdrawal amount
         And   I click on the element "balanceEnquiryLink"
         And   I set "33153" to the inputfield "AccountNumberTextBox"
         And   I click on the element "submitButton"
-        And   I store text of element "BalanceText" into variable
-        Then   Print variable "outputText"
+        And   I store text of element "BalanceText" into variable "currentBalance"
+        Then   Print variable "currentBalance"
         
