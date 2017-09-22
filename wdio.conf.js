@@ -198,7 +198,7 @@ exports.config = {
 			 var fs = require('fs');
              var loginPage =  require('./src/support/objectRepository/loginPage.js')();
 
-             console.log(' before loginPage ', loginPage)
+             
 			 var pathObj = require('path');
 			
 			 var deleteFolderRecursive = function(path) {

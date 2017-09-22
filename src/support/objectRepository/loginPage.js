@@ -7,6 +7,13 @@
  */
 module.exports = (action, type, element) => {
    global.userNameTextbox = "input[name='uid']";
-   console.log(' global.userNameTextbox ',  global.userNameTextbox);
+   global.passwordTextbox = "input[name='password']";
+   global.loginButton = "input[name='btnLogin']";
+   global.balanceEnquiryLink = "a[href='BalEnqInput.php']";
+   global.AccountNumberTextBox = "input[name='accountno']";
+   global.submitButton = "input[name='AccSubmit']";
+   global.BalanceText = "//*[@id='balenquiry']/tbody/tr[16]/td[2]";
+
+
 };
 

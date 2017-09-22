@@ -7,12 +7,12 @@ Feature: Balance Enquiry after Deposit and Withdrawal amount
 
     Scenario: login with valid credentials
         When  I set "mngr97977" to the inputfield "userNameTextbox"
-        And   I set "mEgubYz" to the inputfield "input[name='password']"
-        And   I click on the element "input[name='btnLogin']"
+        And   I set "mEgubYz" to the inputfield "passwordTextbox"
+        And   I click on the element "loginButton"
         
-        And   I click on the element "a[href='BalEnqInput.php']"
-        And   I set "33153" to the inputfield "input[name='accountno']"
-        And   I click on the element "input[name='AccSubmit']"
-        And   I store text of element "//*[@id='balenquiry']/tbody/tr[16]/td[2]" into variable
+        And   I click on the element "balanceEnquiryLink"
+        And   I set "33153" to the inputfield "AccountNumberTextBox"
+        And   I click on the element "submitButton"
+        And   I store text of element "BalanceText" into variable
         Then   Print variable "outputText"
         

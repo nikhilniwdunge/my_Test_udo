@@ -25,14 +25,15 @@ import submitForm from '../support/action/submitForm';
 defineSupportCode(({ When }) => {
     When(
         /^I (click|doubleclick) on the (link|button|element) "([^"]*)?"$/,
-        clickElement
+        function(action, type, element){
+            clickElement(action, type, global[element]);
+        }
+        
     );
 
     When(
         /^I (add|set) "([^"]*)?" to the inputfield "([^"]*)?"$/,
         function(method, value, element){
-            console.log('method, value, element ', method, value, element);
-            console.log('global[element] ', global[element]);
             setInputField(method, value, global[element]);
         }
     );
