@@ -14,7 +14,7 @@ Feature: add, Edit,Delete Account feature
         
         And   I click on the element "newAccountLink"
         And   I set "27449" to the inputfield "customerIdTextbox"
-        And   I select the option with the text "Current" for element "addNewAccount_AccountTypeDropdown"
+        And   I select the option with the text "inputForAccountTypeDropdown" for element "addNewAccount_AccountTypeDropdown"
         And   I set "10000" to the inputfield "initialDepositTextbox"
         And   I click on the element "addNewAccount_SubmitButton"
         And   I store text of element "accountIDText" into variable "AccountID"

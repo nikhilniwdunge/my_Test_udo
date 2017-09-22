@@ -29,12 +29,12 @@ module.exports = () => {
    //global.ditAccountLink = "a[href='editAccount.php']";
 
    global.customerIdTextbox = "input[name='cusid']";
-   global.addNewAccount_AccountTypeDropdown = "input[name='selaccount']";
+   global.addNewAccount_AccountTypeDropdown = "select[name='selaccount']";
    global.initialDepositTextbox = "input[name='inideposit']";
    global.addNewAccount_SubmitButton = "input[value='submit']";
    global.accountIDText = ".//*[@id='account']/tbody/tr[4]/td[2]";
 
-   global.editAccount_AccountTypeDropdown = "input[name='a_type']";
+   global.editAccount_AccountTypeDropdown = "select[name='a_type']";
 
 
 };
