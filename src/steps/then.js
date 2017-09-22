@@ -69,7 +69,9 @@ defineSupportCode(({ Then }) => {
 
     Then(
          /^I store text of element "([^"]*)?" into variable "([^"]*)?"$/,
-         storeOutputText
+         function(element, variableName){
+            storeOutputText(global[element], variableName);
+         }
     );
 
     Then(
