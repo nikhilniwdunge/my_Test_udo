@@ -202,12 +202,10 @@ exports.config = {
              
 			 var pathObj = require('path');
 			
-			 var deleteFolderRecursive = function(path) {
-				console.log('path ', path)
+			/* var deleteFolderRecursive = function(path) {
 				if (fs.existsSync(path)) {
 
 					fs.readdirSync(path).forEach(function(file, index) {
-				console.log('file ', file)
 
 					var curPath = path + "/" + file;
 
@@ -235,7 +233,7 @@ exports.config = {
 
 		 }catch(e){
 			 console.log('  err ', e.message);
-		 }
+		 }*/
 	   const chai = require('chai');
 
         global.expect = chai.expect;

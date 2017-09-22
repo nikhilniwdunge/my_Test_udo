@@ -13,9 +13,13 @@ Feature: add, Edit,Delete Account feature
         And   I click on the element "loginButton"
         
         And   I click on the element "newAccountLink"
+        And   I pause for 10000ms
         And   I set "27449" to the inputfield "customerIdTextbox"
-        And   I select the option with the value "Current" for element "addNewAccount_AccountTypeDropdown"
+        And   I pause for 10000ms
         And   I set "10000" to the inputfield "initialDepositTextbox"
+        And   I pause for 10000ms
+        And   I select the option with the value "Current" for element "addNewAccount_AccountTypeDropdown"
+       
         And   I click on the element "addNewAccount_SubmitButton"
         And   I store text of element "accountIDText" into variable "AccountID"
         And   Print variable "AccountID"
