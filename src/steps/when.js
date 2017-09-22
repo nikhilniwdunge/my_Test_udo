@@ -18,7 +18,6 @@ import setInputField from '../support/action/setInputField';
 import setPromptText from '../support/action/setPromptText';
 import submitForm from '../support/action/submitForm';
 
-import loginPage from '../support/objectRepository/loginPage';
 
 
 defineSupportCode(({ When }) => {

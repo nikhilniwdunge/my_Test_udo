@@ -158,6 +158,7 @@ exports.config = {
             './src/steps/given.js',
             './src/steps/then.js',
             './src/steps/when.js',
+			'./src/support/objectRepository/loginPage.js',
         ],
         // <string> specify a custom snippet syntax
         snippetSyntax: undefined,
