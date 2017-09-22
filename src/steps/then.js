@@ -73,7 +73,7 @@ defineSupportCode(({ Then }) => {
     );
 
     Then(
-          /^Print variable "([^"]*)?"$/,
+        /^Print variable "([^"]*)?"$/,
          getValue
     );
 

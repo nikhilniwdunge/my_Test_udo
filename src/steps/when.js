@@ -18,6 +18,8 @@ import setInputField from '../support/action/setInputField';
 import setPromptText from '../support/action/setPromptText';
 import submitForm from '../support/action/submitForm';
 
+import loginPage from '../support/objectRepository/loginPage';
+
 
 defineSupportCode(({ When }) => {
     When(
@@ -26,8 +28,10 @@ defineSupportCode(({ When }) => {
     );
 
     When(
-        /^I (add|set) (-?\\d+) to the inputfield "([^"]*)?"$/,
-        setInputField
+        /^I (add|set) "([^"]*)?" to the inputfield "([^"]*)?"$/,
+        function(testData, object){
+            setInputField(testData, global[object]);
+        }
     );
 
     When(
