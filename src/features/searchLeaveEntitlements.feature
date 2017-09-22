@@ -19,4 +19,4 @@ Feature: Search Leave Entitlements Feature
         And   I set "Fiona Grace" to the inputfield "#entitlements_employee_empName"
 		And   I select the option with the text "Vacation US" for element "#entitlements_leave_type"
 		And   I select the option with the text "01-01-2015 - 31-12-2015" for element "#period"
-		And  I click on the element "#searchBtn"
+		And   I click on the element "#searchBtn"
