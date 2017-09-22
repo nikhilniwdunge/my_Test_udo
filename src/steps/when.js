@@ -138,10 +138,7 @@ defineSupportCode(({ When }) => {
 
     When(
         /^I select the option with the (name|value|text) "([^"]*)?" for element "([^"]*)?"$/,
-        function(selectionType, selectionValue, selectElem){
-            console.log(' selectElem ', selectElem, 'i selectr ', global[selectElem]);
-            selectOption(selectionType,selectionValue, global[selectElem]);
-        }
+        selectOption
         
     );
 
