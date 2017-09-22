@@ -20,6 +20,7 @@ module.exports = (selectionType, selectionValue, selectElem) => {
      * @type {Object}
      */
     const element = browser.element(selectElem);
+    console.log('element ', element);
 
     /**
      * The method to use for selecting the option
