@@ -17,7 +17,7 @@ module.exports = () => {
    global.BalanceText = ".//*[@id='balenquiry']/tbody/tr[16]/td[2]";
    global.ExpectedBalance = "10000";
 
-   global.amountTextbox = "input[name='ammount']";
+   global.amountTextbox = ".//input[@name='ammount']";
    global.descriptionTextbox = "input[name='desc']";
 
    global.depositLink = "a[href='BalEnqInput.php']";
