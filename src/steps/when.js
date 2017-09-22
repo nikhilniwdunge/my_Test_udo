@@ -31,6 +31,7 @@ defineSupportCode(({ When }) => {
         function(method, value, element){
             console.log('method, value, element ', method, value, element);
             console.log('global[element] ', global[element]);
+            console.log('global[] ', global);
             setInputField(method, value, global[element]);
         }
     );

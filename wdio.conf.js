@@ -155,10 +155,10 @@ exports.config = {
         profile: [],
         // <string[]> (file/dir) require files before executing features
         require: [
+            './src/support/objectRepository/loginPage.js',
             './src/steps/given.js',
             './src/steps/then.js',
-            './src/steps/when.js',
-			'./src/support/objectRepository/loginPage.js',
+            './src/steps/when.js'
         ],
         // <string> specify a custom snippet syntax
         snippetSyntax: undefined,
