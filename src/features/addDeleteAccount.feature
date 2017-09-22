@@ -18,7 +18,7 @@ Feature: add, Edit,Delete Account feature
         And   I pause for 10000ms
         And   I set "10000" to the inputfield "initialDepositTextbox"
         And   I pause for 10000ms
-        And   I select the option with the value "Current" for element "select[name='selaccount']"
+        And   I select the option with the value "Current" for element ".layout>tbody>tr>td>table>tbody>tr>td>select"
        
         And   I click on the element "addNewAccount_SubmitButton"
         And   I store text of element "accountIDText" into variable "AccountID"
