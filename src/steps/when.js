@@ -34,6 +34,8 @@ defineSupportCode(({ When }) => {
     When(
         /^I (add|set) "([^"]*)?" to the inputfield "([^"]*)?"$/,
         function(method, value, element){
+            console.log('element ', element)
+            console.log('global[element] ', global[element])
             setInputField(method, value, global[element]);
         }
     );
