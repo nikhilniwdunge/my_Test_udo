@@ -4,7 +4,7 @@ Feature: Balance Enquiry after Deposit and Withdrawal amount
     I want to be able to test the attributes of a given element
 
     #Background:
-        #Given I open the site "Bank_url" 
+       # Given I open the site "Bank_url" 
 
     Scenario: First check balance, deposit some ammount, withdrawal same amount then finally check balance.
         Given I open the url "Bank_url"
@@ -18,20 +18,19 @@ Feature: Balance Enquiry after Deposit and Withdrawal amount
         And   I expect that element "BalanceText" contains the text "ExpectedBalance"
         
         And   I click on the element "withdrawalLink"
-        And   I set "33153" to the inputfield "AccountNumberTextBox"
-        And   I pause for 10000ms  
+        And   I set "33153" to the inputfield "AccountNumberTextBox"  
         And   I set "25000" to the inputfield "amountTextbox" 
-        #And   I set "Mediclaim Recovery-Parent" to the inputfield "descriptionTextbox"
-        #And   I click on the element "submitButton"
+        And   I set "Mediclaim Recovery-Parent" to the inputfield "descriptionTextbox"
+        And   I click on the element "submitButton"
 
-       # And   I click on the element "depositLink"
-        #And   I set "33153" to the inputfield "AccountNumberTextBox"  
-        #And   I set "25000" to the inputfield "amountTextbox" 
-        #And   I set "Salary-September 2017" to the inputfield "descriptionTextbox"
-       # And   I click on the element "submitButton" 
+        And   I click on the element "depositLink"
+        And   I set "33153" to the inputfield "AccountNumberTextBox"  
+        And   I set "25000" to the inputfield "amountTextbox" 
+        And   I set "Salary-September 2017" to the inputfield "descriptionTextbox"
+        And   I click on the element "submitButton" 
 
-       # And   I click on the element "balanceEnquiryLink"
-       # And   I set "33153" to the inputfield "AccountNumberTextBox"
-        #And   I click on the element "submitButton"
-       # Then   I expect that element "BalanceText" contains the text "ExpectedBalance"   
+        And   I click on the element "balanceEnquiryLink"
+        And   I set "33153" to the inputfield "AccountNumberTextBox"
+        And   I click on the element "submitButton"
+        Then   I expect that element "BalanceText" contains the text "ExpectedBalance"   
 	 
