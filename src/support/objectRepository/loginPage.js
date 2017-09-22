@@ -21,8 +21,8 @@ module.exports = () => {
 
    global.descriptionTextbox = "input[name='desc']";
 
-   global.depositLink = "a[href='BalEnqInput.php']";
-   global.withdrawalLink = "a[href='BalEnqInput.php']";
+   global.depositLink = "a[href='DepositInput.php']";
+   global.withdrawalLink = "a[href='WithdrawalInput.php']";
 
 };
 
