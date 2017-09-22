@@ -6,6 +6,7 @@
  * @param  {String}   expectedText  The text to check against
  */
 module.exports = (element, variableName) => {
+    console.log(' element, variableName ', element, variableName)
     /**
      * The command to perform on the browser object
      * @type {String}
