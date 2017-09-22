@@ -26,7 +26,7 @@ defineSupportCode(({ When }) => {
     );
 
     When(
-        /^I (add|set) "([^"]*)?" to the inputfield "([^"]*)?"$/,
+        /^I (add|set) (-?\\d+) to the inputfield "([^"]*)?"$/,
         setInputField
     );
 
