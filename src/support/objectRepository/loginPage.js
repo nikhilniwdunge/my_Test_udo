@@ -12,7 +12,7 @@ module.exports = (action, type, element) => {
    global.balanceEnquiryLink = "a[href='BalEnqInput.php']";
    global.AccountNumberTextBox = "input[name='accountno']";
    global.submitButton = "input[name='AccSubmit']";
-   global.BalanceText = "//*[@id='balenquiry']/tbody/tr[16]/td[2]";
+   global.BalanceText = ".//*[@id='balenquiry']/tbody/tr[16]/td[2]";
 
 
 };
