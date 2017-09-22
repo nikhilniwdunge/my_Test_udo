@@ -23,6 +23,19 @@ module.exports = () => {
 
    global.depositLink = "a[href='DepositInput.php']";
    global.withdrawalLink = "a[href='WithdrawalInput.php']";
+   global.newAccountLink = "a[href='addAccount.php']";
+   global.editAccountLink = "a[href='editAccount.php']";
+   global.deleteAccountLink = "a[href='deleteAccountInput.php']";
+   //global.ditAccountLink = "a[href='editAccount.php']";
+
+   global.customerIdTextbox = "input[name='cusid']";
+   global.addNewAccount_AccountTypeDropdown = "input[name='selaccount']";
+   global.initialDepositTextbox = "input[name='inideposit']";
+   global.addNewAccount_SubmitButton = "input[value='submit']";
+   global.accountIDText = ".//*[@id='account']/tbody/tr[4]/td[2]";
+
+   global.editAccount_AccountTypeDropdown = "input[name='a_type']";
+
 
 };
 
