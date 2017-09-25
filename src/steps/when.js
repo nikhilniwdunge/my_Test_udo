@@ -34,9 +34,6 @@ defineSupportCode(({ When }) => {
     When(
         /^I (add|set) "([^"]*)?" to the inputfield "([^"]*)?"$/,
         function(method, value, element){
-            console.log('element ', element)
-            console.log('value ', value)
-            console.log('global[element] ', global[element])
             setInputField(method, value, global[element]);
         }
     );
@@ -138,7 +135,10 @@ defineSupportCode(({ When }) => {
 
     When(
         /^I select the option with the (name|value|text) "([^"]*)?" for element "([^"]*)?"$/,
-        selectOption
+        function(selectionType, selectionValue, selectElem){
+             selectOption(selectionType, global[selectionValue], global[selectElem]);
+        }
+       
         
     );
 
