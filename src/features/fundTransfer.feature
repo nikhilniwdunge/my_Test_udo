@@ -45,4 +45,4 @@ Feature: Balance Enquiry after fundTransfer from two accounts
         And   I click on the element "balanceEnquiryLink"
         And   I set "33157" to the inputfield "AccountNumberTextBox"
         And   I click on the element "submitButton"
-        And   I expect that element "BalanceText" contains the text "ExpectedBalance"
+        Then   I expect that element "BalanceText" contains the text "ExpectedBalance"
