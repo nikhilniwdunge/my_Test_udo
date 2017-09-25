@@ -25,6 +25,10 @@ Feature: add, Edit,Delete Account feature
         And   I insert "AccountID" to the inputfield "AccountNumberTextBox"
         And   I click on the element "submitButton"
         And   I click on the element "editAccount_AccountTypeSavings"
+        And   I click on the element "submitButton"
+
+        And   I click on the element "deleteAccountLink"
+        And   I insert "AccountID" to the inputfield "AccountNumberTextBox"
         Then  I click on the element "submitButton"
         
         

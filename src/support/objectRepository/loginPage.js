@@ -26,6 +26,7 @@ module.exports = () => {
    global.newAccountLink = "a[href='addAccount.php']";
    global.editAccountLink = "a[href='editAccount.php']";
    global.deleteAccountLink = "a[href='deleteAccountInput.php']";
+   global.fundTransferLink = "a[href='FundTransInput.php']";
    //global.ditAccountLink = "a[href='editAccount.php']";
 
    global.customerIdTextbox = "input[name='cusid']";
@@ -41,6 +42,9 @@ module.exports = () => {
 
    global.editAccount_AccountTypeCurrent = "//select[@name='a_type']/option[1]";
    global.editAccount_AccountTypeSavings = "//select[@name='a_type']/option[2]";
+
+   global.payersAccountTextbox = "input[name='payersaccount']";
+   global.payeeAccountTextbox = "input[name='payeeaccount']";
    
 
 };
