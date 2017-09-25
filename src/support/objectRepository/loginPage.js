@@ -30,8 +30,7 @@ module.exports = () => {
 
    global.customerIdTextbox = "input[name='cusid']";
    global.addNewAccount_AccountTypeDropdown = "//select[@name='selaccount']";
-   global.
-    = "//select[@name='selaccount']/option[2]";
+  
    global.addNewAccount_AccountTypeSavings = "//select[@name='selaccount']/option[1]";
    global.addNewAccount_AccountTypeCurrent = "//select[@name='selaccount']/option[2]";
    global.inputForAccountTypeDropdown = "Current";
