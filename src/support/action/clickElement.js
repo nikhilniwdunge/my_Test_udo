@@ -18,7 +18,7 @@ module.exports = (action, type, element) => {
      * @type {String}
      */
     const method = (action === 'click') ? 'click' : 'doubleClick';
-    console.log(' check if ', elem);
+    
     checkIfElementExists(elem);
 
     browser[method](elem);
