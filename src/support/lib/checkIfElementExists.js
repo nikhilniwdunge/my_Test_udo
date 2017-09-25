@@ -10,11 +10,10 @@ module.exports = (element, falsCase, exactly) => {
      * The number of elements found in the DOM
      * @type {Int}
      */    
-     console.log(' nrOfElements ', element)
-     console.log(' nrOfElements ', browser.elements(element).value)
+     
 
     const nrOfElements = browser.elements(element).value;
-    console.log(' nrOfElements ', nrOfElements)
+   
     if (falsCase === true) { 
         expect(nrOfElements).to.have.lengthOf(
             0,

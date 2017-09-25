@@ -1,4 +1,4 @@
-@addDeleteAccount
+@addEditDeleteAccount
 Feature: add, Edit,Delete Account feature
     As a developer
     I want to be able to test the attributes of a given element
@@ -15,12 +15,16 @@ Feature: add, Edit,Delete Account feature
         And   I click on the element "newAccountLink"
         And   I set "27449" to the inputfield "customerIdTextbox"
         And   I set "10000" to the inputfield "initialDepositTextbox"
-        And   I pause for 10000ms
-        And   I select the option with the name "inputForAccountTypeDropdown" for element "addNewAccount_AccountTypeDropdown"
-       
+        And   I click on the element "addNewAccount_AccountTypeCurrent"
         And   I click on the element "addNewAccount_SubmitButton"
         And   I store text of element "accountIDText" into variable "AccountID"
         And   Print variable "AccountID"
+
+        And   I click on the element "editAccountLink"
+        And   I set "AccountID" to the inputfield "AccountNumberTextBox"
+        And  I click on the element "submitButton"
+        And   I click on the element "editAccount_AccountTypeSavings"
+        And  I click on the element "submitButton"
         
         And   I click on the element "deleteAccountLink"
         And   I set "AccountID" to the inputfield "AccountNumberTextBox"
