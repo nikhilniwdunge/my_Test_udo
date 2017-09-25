@@ -30,6 +30,8 @@ module.exports = () => {
 
    global.customerIdTextbox = "input[name='cusid']";
    global.addNewAccount_AccountTypeDropdown = "//select[@name='selaccount']";
+   global.addNewAccount_AccountTypeCurrent = "//select[@name='selaccount']/option[2]";
+   global.addNewAccount_AccountTypeSavings = "//select[@name='selaccount']/option[1]";
    global.inputForAccountTypeDropdown = "Current";
 
    global.initialDepositTextbox = "input[name='inideposit']";
@@ -37,7 +39,7 @@ module.exports = () => {
    global.accountIDText = ".//*[@id='account']/tbody/tr[4]/td[2]";
 
    global.editAccount_AccountTypeDropdown = "select[name='a_type']";
-   
+
 
 
 };
