@@ -16,13 +16,14 @@ Feature: add, Edit,Delete Account feature
         And   I set "27449" to the inputfield "customerIdTextbox"
         And   I set "10000" to the inputfield "initialDepositTextbox"
         And   I click on the element "addNewAccount_AccountTypeCurrent"
+
         And   I click on the element "addNewAccount_SubmitButton"
         And   I store text of element "accountIDText" into variable "AccountID"
         And   Print variable "AccountID"
 
         And   I click on the element "editAccountLink"
-        And   I set "AccountID" to the inputfield "AccountNumberTextBox"
-        And  I click on the element "submitButton"
+        And   I insert "AccountID" to the inputfield "AccountNumberTextBox"
+        And   I click on the element "submitButton"
         And   I click on the element "editAccount_AccountTypeSavings"
         Then  I click on the element "submitButton"
         
