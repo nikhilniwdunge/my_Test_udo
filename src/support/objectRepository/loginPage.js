@@ -27,7 +27,7 @@ module.exports = () => {
    global.editAccountLink = "a[href='editAccount.php']";
    global.deleteAccountLink = "a[href='deleteAccountInput.php']";
    global.fundTransferLink = "a[href='FundTransInput.php']";
-   global.miniStatementLink = "MiniStatementInput.php";
+   global.miniStatementLink = "a[href='MiniStatementInput.php']";
    //global.ditAccountLink = "a[href='editAccount.php']";
 
    global.customerIdTextbox = "input[name='cusid']";
