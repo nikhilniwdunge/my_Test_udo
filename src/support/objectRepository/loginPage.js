@@ -8,6 +8,7 @@
 module.exports = () => {
 
    global.Bank_url="http://www.demo.guru99.com/v4/" 
+   global.ExpectedBank_url="http://www.demo.guru99.com/v4/" 
    global.userNameTextbox = "input[name='uid']";
    global.passwordTextbox = "input[name='password']";
    global.loginButton = "input[name='btnLogin']";
@@ -48,10 +49,10 @@ module.exports = () => {
    global.payeeAccountTextbox = "input[name='payeeaccount']";
 
 
-   global.MiniStateTransactionTypeForWithdrawal = ".//*[@id='ministmt']/tbody/tr[2]/td[3]";
-   global.MiniStateTransactionTypeForDeposit = ".//*[@id='ministmt']/tbody/tr[3]/td[3]";
-   global.MiniStateAmountForWithdrawal = ".//*[@id='ministmt']/tbody/tr[2]/td[2]";
-   global.MiniStateAmountForDeposit = ".//*[@id='ministmt']/tbody/tr[3]/td[2]";
+   global.MiniStateTransactionTypeForWithdrawal = ".//*[@id='ministmt']/tbody/tr[3]/td[3]";
+   global.MiniStateTransactionTypeForDeposit = ".//*[@id='ministmt']/tbody/tr[2]/td[3]";
+   global.MiniStateAmountForWithdrawal = ".//*[@id='ministmt']/tbody/tr[3]/td[2]";
+   global.MiniStateAmountForDeposit = ".//*[@id='ministmt']/tbody/tr[2]/td[2]";
 
    global.Var_MiniStateTransactionTypeForWithdrawal = "w";
    global.var_MiniStateTransactionTypeForDeposit = "d";
