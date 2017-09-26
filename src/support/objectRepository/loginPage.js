@@ -16,6 +16,11 @@ module.exports = () => {
    global.AccountNumberTextBox = "input[name='accountno']";
    global.amountTextbox = "input[name='ammount']";
 
+   global.loginPageTitle = " Guru99 Bank Home Page";
+   global.homePageTitle = " Guru99 Bank Manager HomePage";
+   global.errorMessage = "#spanMessage";
+   
+
    global.submitButton = "input[name='AccSubmit']";
    global.BalanceText = ".//*[@id='balenquiry']/tbody/tr[16]/td[2]";
    global.ExpectedBalance = "10000";
