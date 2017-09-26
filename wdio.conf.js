@@ -194,15 +194,15 @@ exports.config = {
         /**
          * Setup the Chai assertion framework
          */
-		// try{
-			// var fs = require('fs');
+		try{
+			var fs = require('fs');
 
              var config =  require('./src/support/testDataConfig/config.js')();
 
              
-			// var pathObj = require('path');
+		  var pathObj = require('path');
 			
-			/* var deleteFolderRecursive = function(path) {
+			 var deleteFolderRecursive = function(path) {
 				if (fs.existsSync(path)) {
 
 					fs.readdirSync(path).forEach(function(file, index) {
@@ -233,7 +233,7 @@ exports.config = {
 
 		 }catch(e){
 			 console.log('  err ', e.message);
-		 }*/
+		 }
 	   const chai = require('chai');
 
         global.expect = chai.expect;
