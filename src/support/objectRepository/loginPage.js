@@ -27,6 +27,7 @@ module.exports = () => {
    global.editAccountLink = "a[href='editAccount.php']";
    global.deleteAccountLink = "a[href='deleteAccountInput.php']";
    global.fundTransferLink = "a[href='FundTransInput.php']";
+   global.miniStatementLink = "MiniStatementInput.php";
    //global.ditAccountLink = "a[href='editAccount.php']";
 
    global.customerIdTextbox = "input[name='cusid']";
@@ -45,7 +46,19 @@ module.exports = () => {
 
    global.payersAccountTextbox = "input[name='payersaccount']";
    global.payeeAccountTextbox = "input[name='payeeaccount']";
-   
+
+
+   global.MiniStateTransactionTypeForWithdrawal = ".//*[@id='ministmt']/tbody/tr[2]/td[3]";
+   global.MiniStateTransactionTypeForDeposit = ".//*[@id='ministmt']/tbody/tr[3]/td[3]";
+   global.MiniStateAmountForWithdrawal = ".//*[@id='ministmt']/tbody/tr[2]/td[2]";
+   global.MiniStateAmountForDeposit = ".//*[@id='ministmt']/tbody/tr[3]/td[2]";
+
+   global.Var_MiniStateTransactionTypeForWithdrawal = "w";
+   global.var_MiniStateTransactionTypeForDeposit = "d";
+   global.Var_MiniStateAmountForWithdrawal = "5000";
+   global.var_MiniStateAmountForDeposit = "5000";
+
+
 
 };
 
