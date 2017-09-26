@@ -54,16 +54,18 @@ module.exports = () => {
    global.payeeAccountTextbox = "input[name='payeeaccount']";
 
 
-   global.MiniStateTransactionTypeForWithdrawal = ".//*[@id='ministmt']/tbody/tr[3]/td[3]";
-   global.MiniStateTransactionTypeForDeposit = ".//*[@id='ministmt']/tbody/tr[2]/td[3]";
-   global.MiniStateAmountForWithdrawal = ".//*[@id='ministmt']/tbody/tr[3]/td[2]";
-   global.MiniStateAmountForDeposit = ".//*[@id='ministmt']/tbody/tr[2]/td[2]";
+   
 
    global.Var_MiniStateTransactionTypeForWithdrawal = "w";
    global.var_MiniStateTransactionTypeForDeposit = "d";
    global.Var_MiniStateAmountForWithdrawal = "5000";
    global.var_MiniStateAmountForDeposit = "5000";
 
+
+    MiniStateTransactionTypeForWithdrawal: { get: function () { return browser.element('.//*[@id='ministmt']/tbody/tr[3]/td[3]'); } },
+    MiniStateTransactionTypeForDeposit: { get: function () { return browser.element('.//*[@id='ministmt']/tbody/tr[2]/td[3]'); } },
+    MiniStateAmountForWithdrawal:     { get: function () { return browser.element('.//*[@id='ministmt']/tbody/tr[3]/td[2]'); } },
+    MiniStateAmountForDeposit:    { get: function () { return browser.element('.//*[@id='ministmt']/tbody/tr[2]/td[2]'); } },
 
 
 };
