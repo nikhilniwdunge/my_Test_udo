@@ -1,9 +1,9 @@
 Feature: Balance Enquiry :-
 
-    Background:
-        Given I open the site "Bank_url"           
+                 
 
     Scenario Outline: login with valid credentials
+        Given I open the site "Bank_url"  
         When  I set "<un>" to the inputfield "userNameTextbox"
         And   I set "<pw>" to the inputfield "passwordTextbox"
         And   I click on the element "loginButton"
