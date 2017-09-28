@@ -1,8 +1,6 @@
 @fundTransfer
-Feature: Balance Enquiry after fundTransfer from two accounts
-    As a developer
-    I want to be able to test the attributes of a given element
-
+Feature: fundTransfer :-
+    
     Scenario: First check balance, fundTransfer from account1 to account2,fundTransfer from account2 to account1, then finally check balance.
 
         Given I open the url "Bank_url"

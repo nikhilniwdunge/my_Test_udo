@@ -1,6 +1,6 @@
 @validInvalidLogin
 
-Feature: Login LogOut Feature
+Feature: Login LogOut :-
     
     Scenario: open URL
         Given I open the url "Bank_url"

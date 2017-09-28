@@ -1,12 +1,10 @@
 @addDeleteAccount
-Feature: add, Edit,Delete Account feature
-    As a developer
-    I want to be able to test the attributes of a given element
+Feature: add,Delete Account :-
 
     #Background:
        # Given I open the site "Bank_url" 
 
-    Scenario: First check balance, deposit some ammount, withdrawal same amount then finally check balance.
+    Scenario: First add account, then finally delete same account.
         Given I open the url "Bank_url"
         When  I set "mngr97977" to the inputfield "userNameTextbox"
         And   I set "mEgubYz" to the inputfield "passwordTextbox"

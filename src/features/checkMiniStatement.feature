@@ -1,8 +1,6 @@
 @checkMiniStatement
-Feature: Check MiniStatement after Deposit and Withdrawal amount
-    As a developer
-    I want to be able to test the attributes of a given element
-
+Feature: Check MiniStatement :-
+    
     #Background:
        # Given I open the site "Bank_url" 
 
