@@ -143,7 +143,7 @@ exports.config = {
         failFast: false,
         // <boolean> Enable this config to treat undefined definitions as
         // warnings
-        ignoreUndefinedDefinitions: true,
+        ignoreUndefinedDefinitions: false,
         // <string[]> ("extension:module") require files with the given
         // EXTENSION after requiring MODULE (repeatable)
         name: [],
