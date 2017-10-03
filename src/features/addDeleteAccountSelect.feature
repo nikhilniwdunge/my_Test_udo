@@ -24,4 +24,3 @@ Feature: add,Delete Account :-
         And   I set "AccountID" to the inputfield "AccountNumberTextBox"
         Then  I click on the element "submitButton"
 
-        
