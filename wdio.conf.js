@@ -46,7 +46,7 @@ exports.config = {
         // make sure that not more than 5 instance gets started at a time.
         maxInstances: 5,
         //
-        browserName: 'chrome',
+        browserName: 'firefox',
     }],
     //
     // ===================
@@ -89,7 +89,7 @@ exports.config = {
     // tests. The following plugins are currently available:
     // WebdriverCSS: https://github.com/webdriverio/webdrivercss
     // WebdriverRTC: https://github.com/webdriverio/webdriverrtc
-    // Browserevent: https://github.com/webdriverio/browserevent
+    // Browserevent: https://github.com/webdriverio/Browserevent
     // plugins: {
     //     webdrivercss: {
     //         screenshotRoot: 'my-shots',
