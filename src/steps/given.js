@@ -27,8 +27,8 @@ defineSupportCode(({ Given }) => {
     Given(
         /^I open the (url|site) "([^"]*)?"$/,
         function(type, page){
-            console.log(' url ', global[page]);
-            openWebsite(type,global[page]);
+            console.log(' url ', page);
+            openWebsite(type,page);
         }
         
     );
