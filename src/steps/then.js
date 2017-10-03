@@ -105,7 +105,7 @@ defineSupportCode(({ Then }) => {
      Then(
          /^I expect that element "([^"]*)?"( not)* contains the text "([^"]*)?"$/,
          function(element,falseCase,expectedText){
-            checkContainsText(global[element],falseCase,global[expectedText]);
+            checkContainsText(global[element],falseCase,expectedText);
         }
          
      );
