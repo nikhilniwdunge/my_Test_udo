@@ -15,8 +15,13 @@ Feature: Balance Enquiry :-
         Then   Print variable "currentBalance"
    
     Examples:
-          |Bankurl|un|pw|an|
+          |Bankurl|username|password|accountNumber|
           |"/"|"mngr97977"|"mEgubYz"|"33153"|
+          |"/"|"mngr97977"|"mEgubYz"|"33155"|
+          |"/"|"mngr97977"|"mEgubYz"|"33156"|
+          |"/"|"mngr97977"|"mEgubYz"|"33157"|
+          
+
           
 
 
