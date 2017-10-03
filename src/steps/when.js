@@ -23,7 +23,7 @@ import submitForm from '../support/action/submitForm';
 
 
 defineSupportCode(({ When }) => {
-    When(
+    When(                                                     
         /^I (click|doubleclick) on the (link|button|element) "([^"]*)?"$/,
         function(action, type, element){
             clickElement(action, type, global[element]);
