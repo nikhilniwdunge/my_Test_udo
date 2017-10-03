@@ -16,7 +16,7 @@ Feature: Balance Enquiry :-
    
     Examples:
           |Bankurl|un|pw|an|
-          |""|"mngr97977"|"mEgubYz"|"33153"|
+          |"/"|"mngr97977"|"mEgubYz"|"33153"|
           
 
 
