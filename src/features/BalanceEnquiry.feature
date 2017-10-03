@@ -13,7 +13,7 @@ Feature: Balance Enquiry :-
         And   I click on the element "balanceEnquiryLink"
         And   I set <accountNumber> to the inputfield "AccountNumberTextBox"
         And   I click on the element "submitButton"
-        And   I expect that element "BalanceText" contains the text "ExpectedBalanceIs"
+        And   I expect that element "BalanceText" contains the text <ExpectedBalanceIs> 
         
         And   I click on the element "depositLink"
         And   I set <accountNumber> to the inputfield "AccountNumberTextBox"  
@@ -30,7 +30,7 @@ Feature: Balance Enquiry :-
         And   I click on the element "balanceEnquiryLink"
         And   I set <accountNumber> to the inputfield "AccountNumberTextBox"
         And   I click on the element "submitButton"
-        Then   I expect that element "BalanceText" contains the text "ExpectedBalanceIs"   
+        Then   I expect that element "BalanceText" contains the text <ExpectedBalanceIs>   
 	 
       Examples:
           |Bankurl|username|password|accountNumber|amountDeposited|DepositDesc|amountWithdrawal|WithdrawalDesc|ExpectedBalanceIs|
