@@ -20,13 +20,13 @@ Feature: Balance Enquiry :-
         And   I set "5000" to the inputfield "amountTextbox" 
         And   I set "Mediclaim Recovery-Parent" to the inputfield "descriptionTextbox"
         And   I click on the element "submitButton"
-
+        
         And   I click on the element "depositLink"
         And   I set "33153" to the inputfield "AccountNumberTextBox"  
         And   I set "5000" to the inputfield "amountTextbox" 
         And   I set "Salary-September 2017" to the inputfield "descriptionTextbox"
         And   I click on the element "submitButton" 
-
+        
         And   I click on the element "balanceEnquiryLink"
         And   I set "33153" to the inputfield "AccountNumberTextBox"
         And   I click on the element "submitButton"
